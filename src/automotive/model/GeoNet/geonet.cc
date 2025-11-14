@@ -101,6 +101,7 @@ namespace ns3 {
         m_egoPV.POS_EPV.lon = longitude_deg;
         m_egoPV.POS_EPV.lat = latitude_deg;
         m_RSU_epv_set = true;
+        m_GNAddress = m_GNAddress.MakeManagedconfiguredAddress (m_GnLocalGnAddr,m_stationtype);
         EPVupdate ();// Update EPV at startup, only for the timestamp
     }
     else
