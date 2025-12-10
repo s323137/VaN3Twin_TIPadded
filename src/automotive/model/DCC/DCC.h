@@ -79,8 +79,10 @@ public:
   void setNewCBRL0Hop (double cbr);
   double getCBRR0 () {return m_CBR_L0_Hop[0];}
   double getCBRL0Prev () {return m_CBR_L0_Hop[1];}
-  void setCBRR1 (double cbr_r1) {m_CBR_R1_Hop = cbr_r1;};
-  double getCBRR1 () {return m_CBR_R1_Hop;};
+  void setCBRL1 (double cbr_r1) {m_CBR_L1_Hop = cbr_r1;};
+  void setCBRL2 (double cbr_r2) { m_CBR_L2_Hop = cbr_r2;};
+  double getCBRR1 () {return m_CBR_L1_Hop;};
+  double getCBRR2 () {return m_CBR_L2_Hop;};
 
 private:
 
@@ -188,7 +190,8 @@ private:
   uint8_t m_T_DCC_NET_Trig = 100;
   std::vector<double> m_CBR_G = {-1, -1};
   std::vector<double> m_CBR_L0_Hop = {0, 0};
-  double m_CBR_R1_Hop = 0.0;
+  double m_CBR_L1_Hop = 0.0;
+  double m_CBR_L2_Hop = 0.0;
 };
 
 }
